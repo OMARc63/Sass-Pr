@@ -1,0 +1,43 @@
+/* Start Header */
+.header {
+    padding: 20px 0;
+    border-bottom: 1px solid $second-gray;
+    overflow: hidden;
+    .logo {
+        width: 30%;
+        float: $float-left;
+        h1 {
+            text-transform: uppercase;
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+        p {
+            color: $gray;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    }
+    .navbar {
+        width: 70%;
+        float: $float-left;
+        background-color: $red;
+        border-radius: 10px;
+        margin-top: 15px;
+        li {
+            width: 20%;
+            float: $float-left;
+            text-align: center;
+            font-size: 18px;
+            a {
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                padding: 20px 10px;
+                &:hover {
+                    color: $second-gray;
+                }
+            }
+        }
+    }
+}
+/* End Header */

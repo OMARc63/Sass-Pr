@@ -1,0 +1,52 @@
+/*
+  ** Media query mixin for help only
+  ** Demo version only for thr cource
+*/
+
+@mixin minMedium {
+    @media (min-width: 991px) {
+        @content;
+    }
+}
+
+/*
+  ** Overlay Mixin
+  ** Overlay Main Properties
+*/
+
+@mixin overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+  ** Prefixes Mixin
+  ** Auto Add Prefixes to Properties
+*/
+
+@mixin prefixer($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value
+    }
+    #{$property}: $value;
+}
+
+/*
+  ** Mixin Mixin
+  ** Auto Add Prefixes to Properties
+*/
+
+@mixin keyF($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
